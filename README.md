@@ -1,31 +1,49 @@
-## How This Works
+# How and what this is
 
-Create A custom, React Component Lib from with Docs - Based Off create-react-library and Added React Styleguidist
+This is a job lot of boilerplate done to add styleguidist to create-react-library
 
-How To RUN
+## How To RUN
 
-yarn
+clone this repo and remove git
 
-cd example and run `yarn start`
+run `yarn`
 
-in root run `yarn start`
+`cd ./example` and run `yarn start` (Normal CRA App)
 
-in root run `yarn styleguide`
+In root run `yarn start` (runs rollup --watch)
 
-This is Split into 3 Sections
+In root run `yarn styleguide` (Runs Styleguide for Docs)
 
-Components -
+#### This is Split into 3 Sections
 
-Documents -
+_Components_
 
-Example -
+_Documents_
 
-In 'tm/src/components/\*\*' build the components (Export All in index.js)
+_Example_
 
-Add a 'Filename.md' to make it appear in the styleguide Docs
+In `'tm/src/components/**'` build the components and Export them all in index.js to make them available for the package
 
-In 'tm/example/\*\*' is a normal CRA Here imports Components to views and play with / can be seen as tests but test must also be written
+Add a 'Filename.md' for styleguide docs -
+
+Add description of component to `styleguide.config.js` so that stylesguide can show it
+
+```js
+  {
+    name: 'Button',
+    components: 'src/components/Button/*.{js,jsx}'
+  }
+```
+
+In `'tm/example/\*\*'`is a normal CRA here import Components to views and play with
+can be seen as tests but test must also be written
 
 TODO
 
+-- How To Deploy All
+
 --TESTS
+
+```
+
+```
